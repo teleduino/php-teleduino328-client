@@ -11,8 +11,8 @@ include_once(__DIR__.'/_config.php');
 
 if(file_exists(__DIR__.'/../vendor/autoload.php')) {
     include_once(__DIR__.'/../vendor/autoload.php');
-} else if(file_exists(__DIR__.'/../../../vendor/autoload.php')) {
-    include_once(__DIR__.'/../../../vendor/autoload.php');
+} else if(file_exists(__DIR__.'/../../../../vendor/autoload.php')) {
+    include_once(__DIR__.'/../../../../vendor/autoload.php');
 } else {
     die("Unable to find autoload.php\n");
 }
