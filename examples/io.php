@@ -1,21 +1,18 @@
 <?php
 /*
-  io.php - Teleduino328 PHP I/O example
-  Version 0.3.3
-  Nathan Kennedy 2009 - 2014
-  http://www.teleduino.org
+ * https://www.teleduino.org
+ *
+ * This code is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ */
 
-  This code is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-*/
+include_once(__DIR__.'/_bootstrap.php');
 
-include_once(dirname(__FILE__).DIRECTORY_SEPARATOR.'_config.php');
-include_once(dirname(dirname(__FILE__)).DIRECTORY_SEPARATOR.'teleduino328.php');
+use Teleduino\Teleduino328Client\Client as Teleduino328;
 
-if(isset($_SERVER['HTTP_HOST']))
-{
-	echo "<pre>";
+if(isset($_SERVER['HTTP_HOST'])) {
+    echo "<pre>";
 }
 
 $Teleduino328 = new Teleduino328();
@@ -77,5 +74,3 @@ $expire_times = array(100, 150, 200, 250, 300, 350, 400, 450);
 $result = $Teleduino328->setDigitalOutputs($offset, $outputs, $expire_times);
 echo print_r($result, true)."\n";
 */
-
-?>

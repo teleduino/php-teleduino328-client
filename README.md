@@ -3,6 +3,10 @@ PHP Teleduino Client for interacting with your Teleduino328 device.
 
 ## Change Log
 
+0.4.0 (2015-01-27)
+- Added composer.json file
+- Reformatted file structure and coding standards to comply with PSR-1, PSR-2, and PSR-4
+
 0.3.3 (2014-02-16)
 - Added support for saving setDigitalOutput as preset value
 

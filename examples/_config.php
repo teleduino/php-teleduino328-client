@@ -1,14 +1,11 @@
 <?php
 /*
-  _config.php - Teleduino328 PHP config example
-  Version 0.3.3
-  Nathan Kennedy 2009 - 2014
-  http://www.teleduino.org
-
-  This code is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-*/
+ * https://www.teleduino.org
+ *
+ * This code is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ */
 
 $config = array();
 
@@ -21,9 +18,6 @@ $config['ethernet_client_proxy'] = array();
 $config['ethernet_client_proxy']['address'] = 'https://us01.proxy.teleduino.org';
 $config['ethernet_client_proxy']['key'] = '00000000000000000000000000000000';
 
-if(file_exists(dirname(__FILE__).DIRECTORY_SEPARATOR.'_config.local.php'))
-{
-	include_once(dirname(__FILE__).DIRECTORY_SEPARATOR.'_config.local.php');
+if(file_exists(__DIR__.'/_config.local.php')) {
+    include_once(__DIR__.'/_config.local.php');
 }
-
-?>
